@@ -49,4 +49,15 @@ def send_email(user_data):
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
         [InlineKeyboardButton("Оставить заявку", callback_data='create_reauest')]
+
     ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    
+    await update.message.reply_text(
+        "Добро пожаловать! Чтобы оставить заявку, нажмите кнопку ниже.", 
+        reply_markup=reply_markup
+    )
+
+#Обработка нажатия кнопки
+
+async 
